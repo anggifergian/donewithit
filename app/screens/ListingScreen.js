@@ -2,7 +2,7 @@ import React from "react";
 import { FlatList, StyleSheet } from "react-native";
 
 import Screen from "../components/Screen";
-import AppCard from "../components/AppCard";
+import Card from "../components/Card";
 import colors from "../config/colors";
 
 const listings = [
@@ -17,7 +17,7 @@ const ListingScreen = () => {
         data={listings}
         keyExtractor={listing => listing.id.toString()}
         renderItem={({item}) =>
-          <AppCard
+          <Card
             title={item.title}
             subTitle={"$" + item.subtitle}
             image={item.image}
