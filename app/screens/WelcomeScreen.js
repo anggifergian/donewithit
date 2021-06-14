@@ -4,19 +4,11 @@ import AppButton from "../components/AppButton";
 
 function WelcomeScreen(props) {
   return (
-    <ImageBackground
-      blurRadius={9}
-      style={styles.background}
-      source={require("../assets/eberhard.jpg")}
-    >
+    <ImageBackground blurRadius={9} style={styles.background} source={require("../assets/eberhard.jpg")}>
       <View style={styles.logoContainer}>
-        <Image
-          style={styles.logo}
-          source={require("../assets/tokopedia.png")}
-        />
+        <Image style={styles.logo} source={require("../assets/tokopedia.png")}/>
         <Text style={styles.tagline}>Sell What You Don't Need</Text>
       </View>
-
       <View style={styles.buttonsContainer}>
         <AppButton title="login" />
         <AppButton title="register" color="secondary" />
