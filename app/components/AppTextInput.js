@@ -16,7 +16,7 @@ const AppTextInput = ({ icon, ...otherProps}) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.white,
+    backgroundColor: colors.light,
     borderRadius: 25,
     marginVertical: 10,
     padding: 15,
