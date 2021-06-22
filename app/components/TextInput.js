@@ -5,9 +5,9 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../config/colors";
 import defaultStyles from "../config/styles";
 
-const AppTextInput = ({ icon, ...otherProps}) => {
+const AppTextInput = ({ icon, width = "100%", ...otherProps}) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { width }]}>
       {icon && <MaterialCommunityIcons name={icon} size={20} color={colors.medium} style={styles.icon} />}
       <TextInput
         placeholderTextColor={defaultStyles.colors.medium}
@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     padding: 15,
     flexDirection: "row",
     alignItems: "center",
-    width: '100%',
   },
   icon: {
     marginRight: 12,
