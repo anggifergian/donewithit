@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
 import Screen from "../components/Screen";
-import AppTextInput from "../components/AppTextInput";
-import AppPicker from "../components/AppPicker";
+import TextInput from "../components/TextInput";
+import Picker from "../components/Picker";
 
 const categories = [
   { label: "Furniture", value: 1 },
@@ -15,13 +15,13 @@ const PickerScreen = () => {
   const [category, setCategory] = useState(categories[0]);
   return (
     <Screen style={{paddingHorizontal: 20}}>
-      <AppPicker
+      <Picker
         selectedItem={category}
         onSelectItem={item => setCategory(item)}
         icon="apps"
         placeholder="Categories"
         items={categories} />
-      <AppTextInput icon="email" placeholder="Username" />
+      <TextInput icon="email" placeholder="Username" />
     </Screen>
   );
 }
