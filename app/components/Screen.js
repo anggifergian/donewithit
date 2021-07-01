@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   view: {
+    padding: 15,
     flex: 1
   }
 })

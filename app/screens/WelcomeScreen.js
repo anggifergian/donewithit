@@ -2,16 +2,16 @@ import React from "react";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import Button from "../components/Button";
 
-function WelcomeScreen(props) {
+function WelcomeScreen({ navigation }) {
   return (
-    <ImageBackground blurRadius={9} style={styles.background} source={require("../assets/eberhard.jpg")}>
+    <ImageBackground blurRadius={9} style={styles.background} source={require("../assets/background.jpg")}>
       <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={require("../assets/tokopedia.png")}/>
+        <Image style={styles.logo} source={require("../assets/logo-red.png")}/>
         <Text style={styles.tagline}>Sell What You Don't Need</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <Button title="login" />
-        <Button title="register" color="secondary" />
+        <Button title="login" onPress={() => navigation.navigate("Login")} />
+        <Button title="register" color="secondary" onPress={() => navigation.navigate("Register")} />
       </View>
     </ImageBackground>
   );
